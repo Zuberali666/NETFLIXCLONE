@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Story Script", sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+}
+
+.main {
+    background-image: url('assests/images/bg1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    height: 80vh;
+    position: relative;
+}
+
+.main .box {
+    height: 80vh;
+    width: 100%;
+    opacity: 0.44;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+nav {
+    margin: auto;
+    max-width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+}
+
+nav img {
+    color: red;
+    width: 120px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    font-weight: 400;
+    font-style: normal;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+}
+
+.hero :first-child {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.hero :nth-child(2) {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.hero :nth-child(3) {
+    font-weight: 350;
+    font-size: 20px;
+    line-height: normal;
+    color: tomato;
+    text-align: center;
+}
+
+.hero :nth-child(4) {
+    font-weight: 350;
+    font-size: 20px;
+    text-align: center;
+}
+
+.hero :nth-child(5) {
+    font-weight: 350;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: tomato;
+    text-align: center;
+}
+
+.hero div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.hero input {     
+    padding: 6px 12px;
+    width: 200px;
+    font-size: 14px;
+    border: none;     
+    outline: none;     
+    border-radius: 6px;
+    box-sizing: border-box;     
+    font-family: "Story Script", sans-serif;  
+}
+
+.hero button {
+    padding: 6px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #e50914;
+    color: white;
+    cursor: pointer;
+}
+
+.curved-divider {
+    width: 100%;
+    height: 8px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 20'%3E%3Cpath d='M0,10 Q300,0 600,10 T1200,10 Q1200,15 1200,20 L0,20 Q0,15 0,10 Z' fill='%23e50914'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.trending-section {
+    padding: 40px 60px;
+    background: #141414;
+}
+
+.trending-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(255, 15, 15);
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel {
+    display: flex;
+    gap: 8px;
+    transition: transform 0.5s ease;
+    padding: 10px 0;
+}
+
+.movie-card {
+    position: relative;
+    min-width: 200px;
+    height: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    animation: autoScroll 15s linear infinite; /* Increased speed from 40s to 15s */
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    z-index: 5;
+}
+
+.movie-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+}
+
+.movie-number {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgb(7, 7, 7);
+    text-shadow: 
+        -2px -2px 0 #eee7e7,
+        2px -2px 0 #eee7e7,
+        -2px 2px 0 #eee7e7,
+        2px 2px 0 #eee7e7,
+        0 0 10px rgba(0,0,0,0.8);
+    z-index: 10;
+    line-height: 1;
+}
+
+.netflix-logo {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #f5e5e5;
+    color: rgb(243, 0, 0);
+    padding: 4px 6px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 2px;
+    z-index: 3;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: rgb(231, 23, 23);
+    font-size: 24px;
+    padding: 20px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.scroll-button:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+/* Enhanced Auto-Scroll Animation - Much Faster */
+@keyframes autoScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1200px) {
+    .trending-section {
+        padding: 30px 40px;
+    }
+    
+    .movie-card {
+        min-width: 180px;
+        height: 250px;
+        animation: autoScroll 12s linear infinite; /* Even faster on smaller screens */
+    }
+    
+    .trending-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        max-width: 90vw;
+        height: 50px;
+    }
+    
+    nav img {
+        width: 100px;
+    }
+    
+    .hero :first-child,
+    .hero :nth-child(2) {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    
+    .hero :nth-child(3),
+    .hero :nth-child(4),
+    .hero :nth-child(5) {
+        font-size: 18px;
+    }
+    
+    .hero input {
+        width: 180px;
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+    
+    .hero button {
+        font-size: 13px;
+        padding: 5px 14px;
+    }
+    
+    .trending-section {
+        padding: 20px 30px;
+    }
+    
+    .trending-title {
+        font-size: 1.5rem;
+    }
+    
+    .movie-card {
+        min-width: 160px;
+        height: 220px;
+        animation: autoScroll 10s linear infinite; /* Fastest on mobile */
+    }
+    
+    .movie-number {
+        font-size: 6rem;
+        bottom: -15px;
+        left: -15px;
+    }
+    
+    .scroll-button {
+        font-size: 20px;
+        padding: 15px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero div {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero input {
+        width: 250px;
+    }
+    
+    .trending-section {
+        padding: 15px 20px;
+    }
+    
+    .movie-card {
+        min-width: 140px;
+        height: 200px;
+        animation: autoScroll 8s linear infinite; /* Ultra-fast on very small screens */
+    }
+    
+    .movie-number {
+        font-size: 5rem;
+        bottom: -10px;
+        left: -10px;
+    }
+    
+    .carousel {
+        gap: 6px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .trending-section {
+        padding: 50px 80px;
+    }
+    
+    .movie-card {
+        min-width: 220px;
+        height: 300px;
+        animation: autoScroll 20s linear infinite; /* Slower on large screens */
+    }
+    
+    .trending-title {
+        font-size: 2.2rem;
+    }
+}
+nav img {
+            width: 55px;
+            height: auto;
+            filter: brightness(1.2) contrast(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        nav img:hover {
+            transform: scale(1.05);
+        }
+
+        nav > div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        nav button {
+            padding: 8px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-family: "Story Script", sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        nav button:hover::before {
+            left: 100%;
+        }
+
+        nav button:hover {
+            background: rgba(229, 9, 20, 0.9);
+            border-color: #e50914;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(229, 9, 20, 0.4);
+        }
+
+        nav button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+        }
+
+        nav button:first-of-type {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        nav button:first-of-type:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: white;
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        nav button:last-of-type {
+            background: linear-gradient(135deg, #e50914, #b8070f);
+            border-color: #e50914;
+            font-weight: 600;
+        }
+
+        nav button:last-of-type:hover {
+            background: linear-gradient(135deg, #f40612, #e50914);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(229, 9, 20, 0.5);
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            nav {
+                max-width: 95vw;
+                height: 70px;
+                padding: 0 15px;
+            }
+
+            nav img {
+                width: 45px;
+            }
+
+            nav > div {
+                gap: 10px;
+            }
+
+            nav button {
+                padding: 6px 16px;
+                font-size: 14px;
+                border-radius: 5px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            nav {
+                height: 60px;
+                padding: 0 10px;
+            }
+
+            nav img {
+                width: 40px;
+            }
+
+            nav > div {
+                gap: 8px;
+            }
+
+            nav button {
+                padding: 5px 12px;
+                font-size: 13px;
+                border-width: 1.5px;
+            }
+
+            nav button:first-of-type {
+                display: none; /* Hide English button on very small screens */
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            nav {
+                max-width: 85vw;
+                height: 90px;
+            }
+
+            nav img {
+                width: 65px;
+            }
+
+            nav button {
+                padding: 10px 24px;
+                font-size: 17px;
+                border-radius: 8px;
+            }
+
+            nav > div {
+                gap: 20px;
+            }
+        }
+        
