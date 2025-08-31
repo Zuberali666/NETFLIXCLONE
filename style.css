@@ -458,6 +458,22 @@ nav img {
             box-shadow: 0 10px 30px rgba(229, 9, 20, 0.5);
         }
 
+        nav select {
+            background: transparent;
+            border: none;
+            color: rgb(239, 13, 13);
+            font-family: "Story Script", sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        select option {
+            background: rgb(241, 234, 234);
+            color: rgb(231, 9, 9);
+            padding: 8px 12px;
+        }
+
         /* Media Queries */
         @media screen and (max-width: 768px) {
             nav {
