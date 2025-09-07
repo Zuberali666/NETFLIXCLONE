@@ -39,7 +39,7 @@ nav button {
     padding: 8px 16px;
     background: transparent;
     color: rgb(224, 32, 32);
-    border: 1px solid #ef0c0c;
+    border: 1px solid #ffffff;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
@@ -51,7 +51,7 @@ nav button:hover {
 
 nav select {
     background: transparent;
-    color: white;
+    color: rgb(245, 245, 245);
     border: none;
     outline: none;
 }
@@ -100,9 +100,9 @@ nav select {
 .hero input {
     padding: 15px 20px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #ed1818;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent;
     color: white;
     min-width: 300px;
 }
