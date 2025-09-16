@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -76,7 +77,7 @@ nav select {
     display: block;
     font-size: 1.5rem;
     margin: 20px 0 30px;
-    color:red ;
+    color: red;
 }
 
 .hero span:nth-child(4),
@@ -84,9 +85,10 @@ nav select {
     display: block;
     font-size: 1.2rem;
     margin-bottom: 10px;
-    
+
 }
-.hero span:nth-child(5){
+
+.hero span:nth-child(5) {
     color: #d11515;
 }
 
@@ -137,7 +139,16 @@ nav select {
     font-size: 2rem;
     margin-bottom: 30px;
     font-weight: bold;
+    color: #d11515;
+    text-decoration-line: line-through;       /* underline, overline, line-through */
+    text-decoration-color:white;            /* change line color */
+    text-decoration-style: solid;           /* solid, dotted, dashed, double, wavy */
+    text-decoration-thickness: 3px;        /* control line thickness */
+    
+    letter-spacing: 2px;                   /* spacing between letters */
+    text-transform: uppercase;             /* UPPERCASE */
 }
+
 
 .carousel-container {
     position: relative;
@@ -248,7 +259,7 @@ nav select {
     box-sizing: border-box;
     place-items: center;
     text-align: center;
-    color: rgb(223, 204, 204) ;
+    color: rgb(223, 204, 204);
     font-size: 1.5rem;
     font-weight: bold;
     position: relative;
@@ -283,6 +294,7 @@ nav select {
     opacity: 0.9;
     line-height: 1.5;
 }
+
 .footer {
     background: #000;
     color: #666;
@@ -290,23 +302,28 @@ nav select {
     font-size: 0.9rem;
     border-top: 8px solid #222;
 }
+
 .footer h3 {
     font-size: 1.2rem;
     margin-bottom: 20px;
     font-weight: bold;
 }
+
 .footer p {
     margin-bottom: 10px;
     line-height: 1.5;
 }
+
 .footer a {
     color: #666;
     text-decoration: none;
 }
+
 .footer a:hover {
     text-decoration: underline;
 }
-.language-select{
+
+.language-select {
     background: transparent;
     color: rgb(249, 13, 13);
     border: none;
@@ -315,7 +332,7 @@ nav select {
 
 .footer-select {
     margin-top: 20px;
-   padding: 8px 16px;
+    padding: 8px 16px;
     background: transparent;
     color: rgb(235, 0, 0);
     border: 1px solid #bf0505;
