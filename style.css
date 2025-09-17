@@ -242,6 +242,9 @@ nav select {
     background: #000;
     padding: 60px 50px;
     border-top: 8px solid #222;
+    display: flex;
+    gap: 20px; /* space between boxes */
+    justify-content: center; /* center them */ 
 }
 
 .More h2 {
@@ -249,6 +252,20 @@ nav select {
     margin-bottom: 40px;
     font-weight: bold;
     text-align: center;
+    font-weight: bold;
+    color: #d11515;
+    text-decoration-line: line-through;       /* underline, overline, line-through */
+    text-decoration-color:white;            /* change line color */
+    text-decoration-style: solid;           /* solid, dotted, dashed, double, wavy */
+    text-decoration-thickness: 3px;        /* control line thickness */
+    
+    letter-spacing: 2px;                   /* spacing between letters */
+    text-transform: uppercase; 
+}
+
+.More h2{
+    justify-content: center;
+    align-content: center;
 }
 
 .More .box {
@@ -265,7 +282,11 @@ nav select {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 45%;  /* each box takes 45% of row */
 }
+
+
+
 
 .More .box:hover {
     transform: translateY(-5px);
@@ -375,3 +396,4 @@ nav select {
         font-size: 6rem;
     }
 }
+
